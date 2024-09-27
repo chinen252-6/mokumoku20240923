@@ -1,0 +1,599 @@
+html {
+    font-size: 62.5%;
+}
+h2{
+   margin-top:0;
+   margin-bottom:0; 
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width:90%;
+    max-width:115.2rem;
+    margin:0 auto;
+}
+.common__title{
+    font-size:4rem;
+}
+.common__subtitle{
+    font-size:1.4rem;
+    margin-top:0;
+}
+
+
+// 変数
+$white:#FDFDFD;
+
+
+
+// header
+.header {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    padding-left:6rem;
+    padding-right:60rem;
+    position:fixed;
+    
+
+}
+.header__logo {
+    padding-top:3rem;
+}
+.header__nav__list{
+     display:flex;
+     text-decoration: none;
+     padding-right:7rem;
+     padding-top:4rem;
+     & a{
+       
+
+     & li{
+        list-style: none;
+        font-size:2rem;
+        padding-left:1rem;
+        padding-right:1rem;
+        color:$white;
+        
+     }
+    }
+}
+
+// トップ
+.top {
+    background-image: url('../image/top__image.png');
+    background-size:cover;
+    width:100%;
+    color:$white;
+   
+    padding-bottom:34rem;
+    
+
+    &__title{
+        font-size:4rem;
+        margin-bottom:1.4rem;
+        padding-top:34rem;
+        padding-left:18rem;
+    }
+    &__subtitle{
+        font-size:1.8rem;
+        margin-top:0;
+        padding-left:18rem;
+    }
+}
+
+// news
+.news {
+    padding-top:14rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+.news__top{
+    padding-bottom:5rem;
+    display:flex;
+}
+.news__top__view{
+    margin-right:0;
+    margin-left:auto;
+    padding-top:2rem;
+    font-size:2rem;
+
+    
+}
+.news__top__view__more{
+    border-bottom:solid 1px #181818;
+    position:relative;
+    display: inline-block;
+    padding-left:7rem;
+    padding-right:7rem;
+    color:black;
+}
+.news__top__view__more::after {
+    content: '';
+    position: absolute;
+    right: 0; /* 矢印の右位置調整 */
+    bottom: -0.1rem;
+    width: 20px;  /* 矢印の横幅 */
+    height: 1px;  /* 矢印の太さ */
+    background-color:#181818;
+    transform: rotate(45deg);
+    transform-origin: right;
+}
+
+.news__cards{
+    display:flex;
+    justify-content: space-between;
+    
+}
+.card{
+    width:24%;
+    border: 1px solid #D1D1D1;
+
+    &__img{
+        width:100%;
+    }
+    &__text{
+        padding-top:0;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        padding-bottom:0;
+        line-height: 1.5;
+    }
+    &__btn{
+        text-align: right;
+        padding-bottom:1rem;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        &__a{
+       
+        margin-bottom:2rem;
+        margin-right:0;
+        margin-left:auto;
+        color: #EC6D51;
+        border: #EC6D51 solid 1px;
+        }
+    }
+    
+}
+.detail{
+    display:flex;
+    justify-content: space-between;
+    width:80%;
+    margin:14rem auto 14rem auto;
+}
+.engineer{
+    background-image:url('../image/engineer.png');
+    background-size: cover;
+    width:45%;
+    color:$white;
+    
+}
+.engineer__title{
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+    &__title{
+        padding-top:5rem;
+        font-size:3.5rem;
+    }
+    &__sub{
+        margin-top:0;
+        font-size: 1.4rem;
+        padding-bottom:7rem;
+    }
+}
+   
+.engineer__text{
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:13rem;
+    &__title{
+        font-size:2.4rem;
+        padding-bottom:2.5rem;
+    }
+    &__text1,&__text2{
+        font-size:1.4rem;
+        line-height: 1.5;
+    }
+}
+
+.manager{
+    background-image: url('../image/manager.png');
+    background-size: cover;
+    width:45%;
+    color:$white;
+}
+.manager__title{
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+    &__title{
+        padding-top:5rem;
+        font-size:3.5rem;
+    }
+    &__sub{
+        margin-top:0;
+        font-size: 1.4rem;
+        padding-bottom:7rem;
+    }
+
+}
+.manager__text{
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:13rem;
+    &__title{
+        font-size:2.4rem;
+        padding-bottom:2.5rem;
+    }
+    &__text1,&__text2{
+        font-size:1.4rem;
+        line-height: 1.5;
+    }
+}
+.engineer__view,
+.manager__view{
+    width:85%;
+    text-align: right;
+    font-size:2rem;
+    padding-bottom:4rem;
+}
+.engineer__view__more,
+.manager__view__more{
+    color:$white;
+    border-bottom: $white 1px solid; 
+    padding:0 5rem;
+    position:relative;
+    display: inline-block;
+}
+.engineer__view__more::after,
+.manager__view__more::after{
+    content: '';
+    position: absolute;
+    right: 0; /* 矢印の右位置調整 */
+    bottom: 0;
+    width: 20px;  /* 矢印の横幅 */
+    height: 1px;  /* 矢印の太さ */
+    background-color: $white;
+    transform: rotate(45deg);
+    transform-origin: right;
+}
+
+// feature
+
+.features{
+    display:flex;
+    justify-content: space-between;
+    width:70%;
+    margin:0 auto;
+    padding-top:5rem;
+    margin-bottom:14rem;
+}
+.cat{
+    width:31%;
+    border: 1px solid #D1D1D1;
+
+    &__img{
+        width:100%;
+    }
+    &__text{
+        padding-top:0;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        padding-bottom:0;
+        font-size:1.6rem;
+        line-height: 1.5;
+    }
+    &__btn{
+        text-align: right;
+        padding-bottom:3rem;
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+        
+        &__more{
+        font-size:1.4rem;
+        margin-bottom:2rem;
+        margin-right:0;
+        margin-left:auto;
+        color: #EC6D51;
+        border: #EC6D51 solid 1px;
+        padding:0.3rem 0 0.3rem 3.5rem;
+        }
+    }
+}
+.what{
+    background-image: url('../image/what.png');
+    background-size:cover;
+    width:100%;
+    color:$white;
+    margin-bottom:22rem;
+   
+}
+.what__title{
+    width:70%;
+    margin:0 auto;
+    padding-top:8.5rem;
+
+    &__main{
+        font-size:4rem;
+    }
+    &__sub{
+        font-size: 1.4rem;
+    }
+}
+.what__text{
+    width:70%;
+    margin:0 auto;
+    padding-top:4.5rem;
+    padding-bottom:7rem;
+
+    &__first{
+        font-size:1.8rem;
+        padding-bottom:4rem;
+        line-height: 1.5;
+    }
+
+    &__sec{
+        font-size:1.8rem;
+        line-height: 1.5;
+    }
+
+}
+// course
+
+.course__top{
+    padding-bottom:7rem;
+}
+.courses{
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:14rem;
+}
+
+.courses__menu{
+    width:24%;
+
+    &__img{
+        width:100%;
+    }
+    &__title{
+        font-size:2.6rem;
+        padding-top:2rem;
+        padding-bottom:1rem;
+    }
+    &__sub{
+        font-size:1.4rem;
+        padding-bottom:0.8rem;
+    }
+    &__data{
+        font-size:1.4rem;
+        padding-bottom:1.6rem;
+    }
+    &__text{
+        font-size:1.6rem;
+        line-height: 1.5;
+        padding-bottom:4rem;
+    }
+    
+}
+.courses__more{
+    margin-right:0;
+    margin-left:auto;
+    text-align:right;
+    &__btn{
+        font-size:2rem;
+        border-bottom:black solid 1px;
+        padding-left:20%;
+        padding-right:15%;
+        position:relative;
+        display: inline-block;
+        color:black;
+    }
+    &__btn::after{
+        content: '';
+        position: absolute;
+        right: 0; /* 矢印の右位置調整 */
+        bottom: 0;
+        width: 20px;  /* 矢印の横幅 */
+        height: 1px;  /* 矢印の太さ */
+        background-color:black;
+        transform: rotate(45deg);
+        transform-origin: right;
+    }
+}
+.strategy{
+    background-image: url('../image/what.png');
+    background-size:cover;
+    width:100%;
+    color:$white;
+    margin-bottom:22rem;
+   
+}
+.strategy__title{
+    width:70%;
+    margin:0 auto;
+    padding-top:8.5rem;
+
+    &__main{
+        font-size:4rem;
+    }
+    &__sub{
+        font-size: 1.4rem;
+    }
+}
+.strategy__text{
+    width:70%;
+    margin:0 auto;
+    padding-top:4.5rem;
+    padding-bottom:7rem;
+
+    &__first{
+        font-size:1.8rem;
+        padding-bottom:4rem;
+        line-height: 1.5;
+    }
+
+    &__sec{
+        font-size:1.8rem;
+        line-height: 1.5;
+    }
+
+}
+// infomation
+.infomation{
+    padding-bottom:14rem;
+}
+.infomation__top{
+    padding-bottom:8.5rem;
+}
+.infomation__main{
+    display:flex;
+    width:85%;
+    margin-right:auto;
+    margin-left:auto;
+    border:#E8E7E6 1px solid;
+}
+.infomation__item,
+.infomation__body{
+    flex: 1 1 50%; /* 幅を50%に */
+    padding: 10px;
+    box-sizing: border-box; 
+}
+.infomation__item__img{
+    width: 100%; 
+    height: auto;
+}
+.infomation__body{
+    &__title{
+        font-size:4rem;
+        padding-top:8rem;
+        padding-bottom:4rem;
+
+    }
+    &__text{
+        font-size:1.4rem;
+        line-height:1.5;
+        padding-bottom:8rem;
+    }
+    &__more{
+        font-size:1.4rem;
+        margin-right:0;
+        margin-left:auto;
+        text-align: right;
+        &__btn{
+            color:black;
+            margin-bottom:2rem;
+            
+            color: #EC6D51;
+            border: #EC6D51 solid 1px;
+            padding:0.3rem 0 0.3rem 3.5rem;
+            }
+    }
+}
+
+// contact
+
+.contact{
+    margin-bottom:14rem;
+}
+.contact__form{
+    padding-top:14rem;
+    margin:0 auto;
+    width:80%;
+}
+.form-group {
+    margin-bottom: 6rem;
+    position: relative;
+    padding-top:0.5rem;
+}
+label {
+    margin-bottom: 2rem;
+    position: absolute;
+    top: -2rem;
+    left: 10px;
+    padding: 0 5px;
+    font-size:1.4rem;
+}
+.required-label{
+    color:$white;
+    background-color:#EC6D51;
+    padding:0 0.4rem;
+    border-radius: 3px;
+    margin-right:0.5rem;
+}
+.unrequired-label{
+    color:$white;
+    background-color:#8B8B8B;
+    padding:0 0.4rem;
+    border-radius: 3px;
+    margin-right:0.5rem;
+}
+input, textarea {
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin:3rem auto 3rem auto;
+    
+}
+input::placeholder, textarea::placeholder {
+    font-size: 1.4rem; 
+    color: #8B8B8B;
+    opacity: 0.5; 
+}
+.submit{
+   
+    text-align: right;
+}
+.submit__btn{
+    padding:1.5rem 4rem;
+    font-size:1.4rem;
+    color:$white;
+    background-color:#EC6D51;
+    border:none;
+}
+.submit__btn:hover {
+    background-color: #e57373;
+}
+
+// footer
+.footer{
+    background-color:#E8E7E6;
+}
+.footer__flex{
+    display:flex;
+    width:90%;
+    margin:0 auto;
+    padding-top:6rem;
+    padding-bottom:6rem;
+   &__logo{
+    width:35%;
+   }
+   &__list{
+    width:60%;
+   }
+}
+
+.footer__flex__list__items{
+    display:flex;
+    justify-content:space-between;
+    padding-top:2rem;
+}
+
+.list__item{
+    
+    &__link{
+        list-style: none;
+        font-size:1.6rem;
+    }
+}
+.copy{
+    padding-bottom:5rem;
+    text-align: center;
+    color:#8B8B8B;
+    font-size:1.4rem;
+}
