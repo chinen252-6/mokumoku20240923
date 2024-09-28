@@ -28,25 +28,34 @@ $white:#FDFDFD;
 
 
 // header
+header{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
 .header {
-    width:100%;
+    width:90%;
     display:flex;
     justify-content: space-between;
-    padding-left:6rem;
-    padding-right:60rem;
     position:fixed;
+    
+    justify-content: center;
+    
+    
     
 
 }
 .header__logo {
     padding-top:3rem;
+    margin-left:0;
+    margin-right:auto;
 }
-.header__nav__list{
+.nav__list{
      display:flex;
      text-decoration: none;
-     padding-right:7rem;
+    
      padding-top:4rem;
-     & a{
+     &__link{
        
 
      & li{
@@ -56,6 +65,10 @@ $white:#FDFDFD;
         padding-right:1rem;
         color:$white;
         
+        
+     }
+     & li:hover{
+        border-bottom:#EC6D51 2px solid;
      }
     }
 }
@@ -108,6 +121,12 @@ $white:#FDFDFD;
     padding-left:7rem;
     padding-right:7rem;
     color:black;
+    &:hover{
+        border-bottom:#181818 2px solid;
+        transform: scale(1.2);
+    }
+    
+
 }
 .news__top__view__more::after {
     content: '';
@@ -119,6 +138,7 @@ $white:#FDFDFD;
     background-color:#181818;
     transform: rotate(45deg);
     transform-origin: right;
+  
 }
 
 .news__cards{
@@ -145,16 +165,46 @@ $white:#FDFDFD;
         padding-bottom:1rem;
         padding-left:1.5rem;
         padding-right:1.5rem;
-        &__a{
-       
+        
+        
+        &__link{
         margin-bottom:2rem;
         margin-right:0;
         margin-left:auto;
         color: #EC6D51;
         border: #EC6D51 solid 1px;
+        padding:0.2rem 0.5rem 0.2rem 3rem;
+
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display:inline-block;
+
+        }
+        &__link::after{
+            background-color:#EC6D51;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            transform: scale(0, 1);
+            transform-origin: left top;
+            transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+            z-index: -1;   
+        }
+
+        &__link:hover{
+            color:$white;
+           
+            
+        }
+        &__link:hover::after{
+            transform: scale(1, 1);
         }
     }
-    
+
 }
 .detail{
     display:flex;
@@ -248,6 +298,10 @@ $white:#FDFDFD;
     padding:0 5rem;
     position:relative;
     display: inline-block;
+    &:hover{
+        border-bottom:$white 2px solid;
+        transform: scale(1.2);
+    }
 }
 .engineer__view__more::after,
 .manager__view__more::after{
@@ -301,8 +355,37 @@ $white:#FDFDFD;
         color: #EC6D51;
         border: #EC6D51 solid 1px;
         padding:0.3rem 0 0.3rem 3.5rem;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display:inline-block;
+        
+        &::after{
+            background-color:#EC6D51;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            transform: scale(0, 1);
+            transform-origin: left top;
+            transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+            z-index: -1;   
         }
+    
+
+        &:hover{
+            color:$white;
+            
+        }
+        &:hover::after{
+            transform: scale(1, 1);
+        }
+        }
+
     }
+
 }
 .what{
     background-image: url('../image/what.png');
@@ -368,9 +451,10 @@ $white:#FDFDFD;
         font-size:1.4rem;
         padding-bottom:0.8rem;
     }
-    &__data{
+    &__date{
         font-size:1.4rem;
         padding-bottom:1.6rem;
+        
     }
     &__text{
         font-size:1.6rem;
@@ -391,6 +475,10 @@ $white:#FDFDFD;
         position:relative;
         display: inline-block;
         color:black;
+        &:hover{
+            border-bottom:#181818 2px solid;
+            transform: scale(1.2);
+        }
     }
     &__btn::after{
         content: '';
@@ -486,13 +574,42 @@ $white:#FDFDFD;
         &__btn{
             color:black;
             margin-bottom:2rem;
-            
             color: #EC6D51;
             border: #EC6D51 solid 1px;
-            padding:0.3rem 0 0.3rem 3.5rem;
+            padding:0.5rem 0 0.5rem 3.5rem;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display:inline-block;
+            &:hover{
+                color:$white;
             }
+            &::after{
+                background-color:#EC6D51;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                transform: scale(0, 1);
+                transform-origin: left top;
+                transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+                z-index: -1;   
+            }
+    
+            &:hover{
+                color:$white;                
+            }
+            &:hover::after{
+                transform: scale(1, 1);
+            }
+        }
     }
 }
+
+        
+        
 
 // contact
 
@@ -550,15 +667,40 @@ input::placeholder, textarea::placeholder {
     text-align: right;
 }
 .submit__btn{
-    padding:1.5rem 4rem;
-    font-size:1.4rem;
-    color:$white;
-    background-color:#EC6D51;
-    border:none;
+    padding: 1.5rem 4rem;
+    font-size: 1.4rem;
+    color: $white;
+    background-color: #EC6D51;
+    border: none;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    border: #EC6D51 2px solid;
+    &::after{
+        background-color: $white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .4s cubic-bezier(0.45, 0, 0.55, 1);
+        z-index: -1;   
+    }
+
+    &:hover {
+        color: #EC6D51;
+        border: #EC6D51 2px solid;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+    }
 }
-.submit__btn:hover {
-    background-color: #e57373;
-}
+
 
 // footer
 .footer{
@@ -589,6 +731,10 @@ input::placeholder, textarea::placeholder {
     &__link{
         list-style: none;
         font-size:1.6rem;
+        &:hover{
+            color:#FDFDFD;
+            font-size:2.6rem;
+        }
     }
 }
 .copy{

@@ -27,31 +27,40 @@ a {
   margin-top: 0;
 }
 
+header {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
-  padding-left: 6rem;
-  padding-right: 60rem;
   position: fixed;
+  justify-content: center;
 }
 
 .header__logo {
   padding-top: 3rem;
+  margin-left: 0;
+  margin-right: auto;
 }
 
-.header__nav__list {
+.nav__list {
   display: flex;
   text-decoration: none;
-  padding-right: 7rem;
   padding-top: 4rem;
 }
-.header__nav__list a li {
+.nav__list__link li {
   list-style: none;
   font-size: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
   color: #FDFDFD;
+}
+.nav__list__link li:hover {
+  border-bottom: #EC6D51 2px solid;
 }
 
 .top {
@@ -99,6 +108,10 @@ a {
   padding-right: 7rem;
   color: black;
 }
+.news__top__view__more:hover {
+  border-bottom: #181818 2px solid;
+  transform: scale(1.2);
+}
 
 .news__top__view__more::after {
   content: "";
@@ -137,12 +150,36 @@ a {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.card__btn__a {
+.card__btn__link {
   margin-bottom: 2rem;
   margin-right: 0;
   margin-left: auto;
   color: #EC6D51;
   border: #EC6D51 solid 1px;
+  padding: 0.2rem 0.5rem 0.2rem 3rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+.card__btn__link::after {
+  background-color: #EC6D51;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.card__btn__link:hover {
+  color: #FDFDFD;
+}
+.card__btn__link:hover::after {
+  transform: scale(1, 1);
 }
 
 .detail {
@@ -242,6 +279,11 @@ a {
   position: relative;
   display: inline-block;
 }
+.engineer__view__more:hover,
+.manager__view__more:hover {
+  border-bottom: #FDFDFD 2px solid;
+  transform: scale(1.2);
+}
 
 .engineer__view__more::after,
 .manager__view__more::after {
@@ -294,6 +336,29 @@ a {
   color: #EC6D51;
   border: #EC6D51 solid 1px;
   padding: 0.3rem 0 0.3rem 3.5rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+.cat__btn__more::after {
+  background-color: #EC6D51;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.cat__btn__more:hover {
+  color: #FDFDFD;
+}
+.cat__btn__more:hover::after {
+  transform: scale(1, 1);
 }
 
 .what {
@@ -357,7 +422,7 @@ a {
   font-size: 1.4rem;
   padding-bottom: 0.8rem;
 }
-.courses__menu__data {
+.courses__menu__date {
   font-size: 1.4rem;
   padding-bottom: 1.6rem;
 }
@@ -380,6 +445,10 @@ a {
   position: relative;
   display: inline-block;
   color: black;
+}
+.courses__more__btn:hover {
+  border-bottom: #181818 2px solid;
+  transform: scale(1.2);
 }
 .courses__more__btn::after {
   content: "";
@@ -478,7 +547,33 @@ a {
   margin-bottom: 2rem;
   color: #EC6D51;
   border: #EC6D51 solid 1px;
-  padding: 0.3rem 0 0.3rem 3.5rem;
+  padding: 0.5rem 0 0.5rem 3.5rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+.infomation__body__more__btn:hover {
+  color: #FDFDFD;
+}
+.infomation__body__more__btn::after {
+  background-color: #EC6D51;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.infomation__body__more__btn:hover {
+  color: #FDFDFD;
+}
+.infomation__body__more__btn:hover::after {
+  transform: scale(1, 1);
 }
 
 .contact {
@@ -553,10 +648,31 @@ input::placeholder, textarea::placeholder {
   color: #FDFDFD;
   background-color: #EC6D51;
   border: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  border: #EC6D51 2px solid;
 }
-
+.submit__btn::after {
+  background-color: #FDFDFD;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
 .submit__btn:hover {
-  background-color: #e57373;
+  color: #EC6D51;
+  border: #EC6D51 2px solid;
+}
+.submit__btn:hover::after {
+  transform: scaleX(1);
 }
 
 .footer {
@@ -586,6 +702,10 @@ input::placeholder, textarea::placeholder {
 .list__item__link {
   list-style: none;
   font-size: 1.6rem;
+}
+.list__item__link:hover {
+  color: #FDFDFD;
+  font-size: 2.6rem;
 }
 
 .copy {
