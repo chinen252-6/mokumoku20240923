@@ -1,6 +1,7 @@
 @charset "UTF-8";
 html {
   font-size: 62.5%;
+  font-family: "Noto Sans JP";
 }
 
 h2 {
@@ -20,11 +21,13 @@ a {
 
 .common__title {
   font-size: 4rem;
+  font-family: "Montserrat";
 }
 
 .common__subtitle {
   font-size: 1.4rem;
   margin-top: 0;
+  font-family: "Noto Sans JP";
 }
 
 header {
@@ -416,15 +419,27 @@ header {
 .courses__menu__title {
   font-size: 2.6rem;
   padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.1rem;
+}
+.courses__menu__filter {
+  font-size: 2.6rem;
+  padding-top: 2rem;
+  padding-bottom: 0.1rem;
+  color: #8B8B8B;
 }
 .courses__menu__sub {
   font-size: 1.4rem;
   padding-bottom: 0.8rem;
+  color: #5D5D5D;
+  margin: 0;
 }
 .courses__menu__date {
   font-size: 1.4rem;
-  padding-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
+  display: inline;
+  background-color: #EC6D51;
+  color: #FDFDFD;
+  padding: 0 0.6rem;
 }
 .courses__menu__text {
   font-size: 1.6rem;
@@ -458,6 +473,36 @@ header {
   width: 20px; /* 矢印の横幅 */
   height: 1px; /* 矢印の太さ */
   background-color: black;
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+
+.courses__fil {
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
+}
+.courses__fil__btn {
+  font-size: 2rem;
+  border-bottom: #8B8B8B solid 1px;
+  padding-left: 20%;
+  padding-right: 15%;
+  position: relative;
+  display: inline-block;
+  color: #8B8B8B;
+}
+.courses__fil__btn:hover {
+  border-bottom: #8B8B8B 2px solid;
+  transform: scale(1.2);
+}
+.courses__fil__btn::after {
+  content: "";
+  position: absolute;
+  right: 0; /* 矢印の右位置調整 */
+  bottom: 0;
+  width: 20px; /* 矢印の横幅 */
+  height: 1px; /* 矢印の太さ */
+  background-color: #8B8B8B;
   transform: rotate(45deg);
   transform-origin: right;
 }
