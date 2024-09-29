@@ -1,5 +1,6 @@
 html {
     font-size: 62.5%;
+    font-family:"Noto Sans JP";
 }
 h2{
    margin-top:0;
@@ -15,16 +16,37 @@ a{
 }
 .common__title{
     font-size:4rem;
+    font-family:"Montserrat";
 }
 .common__subtitle{
     font-size:1.4rem;
     margin-top:0;
+    font-family:"Noto Sans JP";
 }
 
 
 // 変数
 $white:#FDFDFD;
 
+// レシポンシブ
+$sp :650px;
+$tab :900px;
+$spc :1200px;
+ @mixin sp {
+    @media screen and (max-width: $sp){
+        @content;
+    }
+ }
+ @mixin tab {
+    @media screen and (max-width: $tab){
+        @content;
+    }
+ }
+ @mixin spc {
+    @media screen and (max-width: $spc){
+        @content;
+    }
+ }
 
 
 // header
@@ -442,18 +464,31 @@ header{
     &__img{
         width:100%;
     }
+    
     &__title{
         font-size:2.6rem;
         padding-top:2rem;
-        padding-bottom:1rem;
+        padding-bottom:0.1rem;
+    }
+    &__filter{
+        font-size:2.6rem;
+        padding-top:2rem;
+        padding-bottom:0.1rem;
+        color:#8B8B8B;
     }
     &__sub{
         font-size:1.4rem;
         padding-bottom:0.8rem;
+        color:#5D5D5D;
+        margin:0;
     }
     &__date{
         font-size:1.4rem;
-        padding-bottom:1.6rem;
+        margin-bottom:1.6rem;
+        display: inline;
+        background-color: #EC6D51;
+        color:$white;
+        padding:0 0.6rem;
         
     }
     &__text{
@@ -492,6 +527,36 @@ header{
         transform-origin: right;
     }
 }
+.courses__fil{
+    margin-right:0;
+    margin-left:auto;
+    text-align:right;
+    &__btn{
+        font-size:2rem;
+        border-bottom:#8B8B8B solid 1px;
+        padding-left:20%;
+        padding-right:15%;
+        position:relative;
+        display: inline-block;
+        color:#8B8B8B;
+        &:hover{
+            border-bottom:#8B8B8B 2px solid;
+            transform: scale(1.2);
+        }
+    }
+    &__btn::after{
+        content: '';
+        position: absolute;
+        right: 0; /* 矢印の右位置調整 */
+        bottom: 0;
+        width: 20px;  /* 矢印の横幅 */
+        height: 1px;  /* 矢印の太さ */
+        background-color:#8B8B8B;
+        transform: rotate(45deg);
+        transform-origin: right;
+    }
+}
+
 .strategy{
     background-image: url('../image/what.png');
     background-size:cover;
