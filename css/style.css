@@ -250,10 +250,21 @@ header {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 900px) {
+  .news__cards {
+    flex-wrap: wrap;
+  }
+}
 
 .card {
   width: 24%;
   border: 1px solid #D1D1D1;
+}
+@media screen and (max-width: 900px) {
+  .card {
+    width: 45%;
+    margin-bottom: 3rem;
+  }
 }
 .card__img {
   width: 100%;
@@ -309,12 +320,22 @@ header {
   width: 80%;
   margin: 14rem auto 14rem auto;
 }
+@media screen and (max-width: 900px) {
+  .detail {
+    width: 100%;
+  }
+}
 
 .engineer {
   background-image: url("../image/engineer.png");
   background-size: cover;
   width: 45%;
   color: #FDFDFD;
+}
+@media screen and (max-width: 900px) {
+  .engineer {
+    width: 48%;
+  }
 }
 
 .engineer__title {
@@ -352,6 +373,11 @@ header {
   background-size: cover;
   width: 45%;
   color: #FDFDFD;
+}
+@media screen and (max-width: 900px) {
+  .manager {
+    width: 48%;
+  }
 }
 
 .manager__title {
@@ -427,6 +453,11 @@ header {
   padding-top: 5rem;
   margin-bottom: 14rem;
 }
+@media screen and (max-width: 900px) {
+  .features {
+    width: 100%;
+  }
+}
 
 .cat {
   width: 31%;
@@ -449,6 +480,13 @@ header {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+@media screen and (max-width: 900px) {
+  .cat__btn {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
 .cat__btn__more {
   font-size: 1.4rem;
   margin-bottom: 2rem;
@@ -461,6 +499,11 @@ header {
   z-index: 1;
   overflow: hidden;
   display: inline-block;
+}
+@media screen and (max-width: 900px) {
+  .cat__btn__more {
+    padding-left: 1rem;
+  }
 }
 .cat__btn__more::after {
   background-color: #EC6D51;
@@ -482,6 +525,11 @@ header {
   transform: scale(1, 1);
 }
 
+@media screen and (max-width: 900px) {
+  .tab {
+    display: none;
+  }
+}
 .what {
   background-image: url("../image/what.png");
   background-size: cover;
@@ -527,9 +575,20 @@ header {
   justify-content: space-between;
   padding-bottom: 14rem;
 }
+@media screen and (max-width: 900px) {
+  .courses {
+    flex-wrap: wrap;
+  }
+}
 
 .courses__menu {
   width: 24%;
+}
+@media screen and (max-width: 900px) {
+  .courses__menu {
+    width: 45%;
+    margin-bottom: 3rem;
+  }
 }
 .courses__menu__img {
   width: 100%;
@@ -676,6 +735,11 @@ header {
   margin-left: auto;
   border: #E8E7E6 1px solid;
 }
+@media screen and (max-width: 900px) {
+  .infomation__main {
+    flex-direction: column;
+  }
+}
 
 .infomation__item,
 .infomation__body {
@@ -693,6 +757,11 @@ header {
   font-size: 4rem;
   padding-top: 8rem;
   padding-bottom: 4rem;
+}
+@media screen and (max-width: 900px) {
+  .infomation__body__title {
+    padding-top: 3rem;
+  }
 }
 .infomation__body__text {
   font-size: 1.4rem;

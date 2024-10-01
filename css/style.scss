@@ -309,11 +309,19 @@ header{
 .news__cards{
     display:flex;
     justify-content: space-between;
+    @include tab{
+        flex-wrap: wrap;
+    }
+
     
 }
 .card{
     width:24%;
     border: 1px solid #D1D1D1;
+    @include tab{
+        width:45%;
+        margin-bottom:3rem;
+    }
 
     &__img{
         width:100%;
@@ -376,12 +384,19 @@ header{
     justify-content: space-between;
     width:80%;
     margin:14rem auto 14rem auto;
+    @include tab{
+        width:100%;
+    }
 }
 .engineer{
     background-image:url('../image/engineer.png');
     background-size: cover;
     width:45%;
     color:$white;
+    @include tab{
+        width:48%;
+    }
+
     
 }
 .engineer__title{
@@ -419,6 +434,9 @@ header{
     background-size: cover;
     width:45%;
     color:$white;
+    @include tab{
+        width:48%;
+    }
 }
 .manager__title{
     width:85%;
@@ -490,6 +508,9 @@ header{
     margin:0 auto;
     padding-top:5rem;
     margin-bottom:14rem;
+    @include tab {
+        width:100%;
+    }
 }
 .cat{
     width:31%;
@@ -511,6 +532,11 @@ header{
         padding-bottom:3rem;
         padding-left:1.5rem;
         padding-right:1.5rem;
+        @include tab{
+            text-align: center;
+            padding-top:2rem;
+            padding-bottom:1rem;
+        }
         
         &__more{
         font-size:1.4rem;
@@ -520,6 +546,9 @@ header{
         color: #EC6D51;
         border: #EC6D51 solid 1px;
         padding:0.3rem 0 0.3rem 3.5rem;
+        @include tab{
+            padding-left:1rem;
+        }
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -551,6 +580,11 @@ header{
 
     }
 
+}
+@include tab{
+    .tab{
+        display:none;
+    }
 }
 .what{
     background-image: url('../image/what.png');
@@ -599,10 +633,17 @@ header{
     display:flex;
     justify-content: space-between;
     padding-bottom:14rem;
+    @include tab {
+        flex-wrap: wrap;
+    }
 }
 
 .courses__menu{
     width:24%;
+    @include tab{
+        width:45%;
+        margin-bottom:3rem;
+    }
 
     &__img{
         width:100%;
@@ -751,6 +792,9 @@ header{
     margin-right:auto;
     margin-left:auto;
     border:#E8E7E6 1px solid;
+    @include tab{
+        flex-direction: column;
+    }
 }
 .infomation__item,
 .infomation__body{
@@ -767,7 +811,9 @@ header{
         font-size:4rem;
         padding-top:8rem;
         padding-bottom:4rem;
-
+        @include tab{
+            padding-top:3rem;
+        }
     }
     &__text{
         font-size:1.4rem;
